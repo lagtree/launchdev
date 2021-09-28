@@ -3,9 +3,13 @@
 <head>
 <style>
 
+
+
 * {
   box-sizing: border-box;
 }
+
+
 
 input[type=text], select, textarea {
   width: 100%;
@@ -34,6 +38,8 @@ input[type=submit]:hover {
   background-color: #bed4e9;
 }
 
+
+
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -52,20 +58,22 @@ input[type=submit]:hover {
   margin-top: 6px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
 }
+
+
 
 ul {
   list-style-type: none;
@@ -91,81 +99,133 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
+
+
 .active {
   background-color: #bed4e9;
 }
 
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
-}
+
+
 </style>
 </head>
 <body>
 
+
+
 <ul>
   <li><a href="/">Home</a></li>
+
   <li><a href="/aboutme.html">About</a></li>
+
   <li><a class="active" href="">Register</a></li>
+  
 </ul>
 
+
+
 <h2>Ticket Request Form:</h2>
+
 <p>To have your device repair requested, you must fill out this form. Please note, all buisness is restricted to central Florida.</p>
+
+
 
 <div class="container">
   <form action="https://formspree.io/f/moqybabj" method="POST">
+
+
+
   <div class="row">
     <div class="col-25">
       <label for="fname">First Name</label>
     </div>
+
+
+
     <div class="col-75">
       <input type="text" id="fname" name="firstname" placeholder="Your name..">
     </div>
   </div>
+
+
+
   <div class="row">
     <div class="col-25">
       <label for="lname">Last Name</label>
     </div>
+
+
+
     <div class="col-75">
       <input type="text" id="lname" name="lastname" placeholder="Your last name..">
     </div>
   </div>
+
+
+
   <div class="row">
     <div class="col-25">
       <label for="phone">Phone number</label>
     </div>
+
+
+
     <div class="col-75">
       <input type="text" id="phone" name="Phone number" placeholder="(123) 456-7890">
     </div>
   </div>
+
+
+
   <div class="row">
     <dive class="col-25">
       <label for="Typeofissue">Type of Issue</label>
     </dive>
+
+
+
     <div class="col-75">
       <select id="Type of Issue" name="Type of Issue">
         <option value="Choose Option">Choose type of Issue Present</option>
+
         <option value="Software">Software</option>
+
         <option value="Hardware">Hardware</option>
+
         <option value="I am unsure">I am unsure</option>
+
       </select>
+
     </div>
   </div>
+
+
+
   <div class="row">
     <div class="col-25">
       <label for="Typeofcomp">Type of Computer</label>
     </div>
+
+
+
     <div class="col-75">
       <select id="Device Type" name="Device Type">
         <option value="Choose Option">Choose kind of device</option>
+
         <option value="LaptopAfter2015">Laptop (made after 2015)</option>
+
         <option value="LaptopBefore2015">Laptop (made before 2015)</option>
+
         <option value="DesktopAfter2015">Desktop (made after 2015)</option>
+
         <option value="DesktopBefore2015">Desktop (made before 2015)</option>
+
       </select>
     </div>
   </div>
+
+
+
   <div class="row">
     <div class="col-25">
       <label for="Describe Problem">Describe Problem</label>
@@ -174,9 +234,15 @@ li a:hover:not(.active) {
       <textarea id="Describe Problem" name="Describe Problem" placeholder="Write something.." style="height:200px"></textarea>
     </div>
   </div>
+
+
+
   <div class="row">
     <input type="submit" value="Submit">
   </div>
+
+
+
   </form>
 </div>
 
