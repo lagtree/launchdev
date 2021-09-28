@@ -21,7 +21,7 @@ label {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #bed4e9;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -31,7 +31,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #bed4e9;
 }
 
 .container {
@@ -114,7 +114,7 @@ li a:hover:not(.active) {
 <p>To have your device repair requested, you must fill out this form. Please note, all buisness is restricted to central Florida.</p>
 
 <div class="container">
-  <form action="/action_page.php">
+  <form action="https://formspree.io/f/moqybabj" method="POST">
   <div class="row">
     <div class="col-25">
       <label for="fname">First Name</label>
@@ -140,8 +140,21 @@ li a:hover:not(.active) {
     </div>
   </div>
   <div class="row">
+    <dive class="col-25">
+      <label for="Typeofissue">Type of Issue</label>
+    </dive>
+    <div class="col-75">
+      <select id="Type of Issue" name="Type of Issue">
+        <option value="Choose Option">Choose type of Issue Present</option>
+        <option value="Software">Software</option>
+        <option value="Hardware">Hardware</option>
+        <option value="I am unsure">I am unsure</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-25">
-      <label for="country">Type of Computer</label>
+      <label for="Typeofcomp">Type of Computer</label>
     </div>
     <div class="col-75">
       <select id="Device Type" name="Device Type">
