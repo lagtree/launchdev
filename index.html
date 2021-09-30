@@ -14,34 +14,69 @@ li {
   float: left;
 }
 
+li {
+  float: left;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  li {
+    float: none;
+  }
+  
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+
 li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  top: 80%;
 }
 
 li a:hover:not(.active) {
   background-color: #111;
 }
 
+li a:hover(.active) {
+  background-color: cyan;
+}
+
 .active {
   background-color: #bed4e9;
-
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
 }
+
+
+
 </style>
 </head>
 <body>
 
+
+
 <ul>
-  <li><a class="active" href="">Home</a></li>
+  <li><a class="active" href="/">Home</i></a></li>
+
   <li><a href="/aboutme.html">About</a></li>
-  <li><a href="/submit.html">Register</a></li>
+
+  <li><a href="submit.html">Register</a></li>
+
 </ul>
 
 </body>
