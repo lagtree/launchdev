@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
 
 
@@ -64,16 +65,9 @@ input[type=submit]:hover {
   clear: both;
 }
 
-
-
-@media screen and (max-width: 800px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+li {
+  float: left;
 }
-
-
 
 ul {
   list-style-type: none;
@@ -83,9 +77,7 @@ ul {
   background-color: #333;
 }
 
-li {
-  float: left;
-}
+
 
 li a {
   display: block;
@@ -93,18 +85,57 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  top: 80%;
 }
+
+@media screen and (max-width: 800px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  li {
+    float:inline-end;
+  }
+  li a {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    list-style-type: none;
+    color: white;
+    text-align: center;
+    padding: 18px 33px;
+    bottom: 0;
+  }
+  ul {
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .footer {
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  background-color: white;
+  color: white;
+  text-align: center;
+  }
+}
+
+
 
 li a:hover:not(.active) {
   background-color: #111;
 }
 
-
+li a:hover(.active) {
+  background-color: cyan;
+}
 
 .active {
   background-color: #bed4e9;
 }
-
 
 
 </style>
@@ -114,12 +145,12 @@ li a:hover:not(.active) {
 
 
 <ul>
-  <li><a href="/">Home</a></li>
+  <li><a href="/">Home</i></a></li>
 
   <li><a href="/aboutme.html">About</a></li>
 
   <li><a class="active" href="">Register</a></li>
-  
+
 </ul>
 
 
@@ -143,7 +174,7 @@ li a:hover:not(.active) {
 
 
     <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
     </div>
   </div>
 
@@ -157,7 +188,7 @@ li a:hover:not(.active) {
 
 
     <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
     </div>
   </div>
 
@@ -171,7 +202,21 @@ li a:hover:not(.active) {
 
 
     <div class="col-75">
-      <input type="text" id="phone" name="Phone number" placeholder="(123) 456-7890">
+      <input type="text" id="phone" name="Phone number" placeholder="(123) 456-7890" required minlength="10" maxlength="10">
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="email">Email address</label>
+    </div>
+
+
+
+    <div class="col-75">
+      <input type="text" id="email" name="email" placeholder="John.Doe@launchdev.net" required>
     </div>
   </div>
 
@@ -241,7 +286,8 @@ li a:hover:not(.active) {
     <input type="submit" value="Submit">
   </div>
 
-
+  <div class="footer">
+    <p>Made by Zachary Verreault</p>
 
   </form>
 </div>
