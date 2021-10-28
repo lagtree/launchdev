@@ -1,96 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-li {
-  float: left;
-}
+  <meta charset="UTF-8">
+  <title>Launchdev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  top: 80%;
-}
-
-@media screen and (max-width: 800px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-  li {
-    float:inline-end;
-  }
-  li a {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    list-style-type: none;
-    color: white;
-    text-align: center;
-    padding: 18px 33px;
-    bottom: 0;
-  }
-  ul {
-    bottom: 0;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .footer {
-  bottom: 0;
-  width: 100%;
-  height: 25px;
-  background-color: white;
-  color: white;
-  text-align: center;
-  }
-}
-
-
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-li a:hover(.active) {
-  background-color: cyan;
-}
-
-.active {
-  background-color: #bed4e9;
-}
-
-
-
-</style>
 </head>
 <body>
+<!-- partial:index.partial.html -->
+<nav class="navbar">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
+      <a id="homebutton" href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
+    </li>
+    <li class="navbar__item">
+      <a id="formbutton" href="#" class="navbar__link"><i data-feather="file-text"></i><span>Ticket Request</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#" class="navbar__link"><i data-feather="help-circle"></i><span>About Me</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#" class="navbar__link"><i data-feather="user"></i><span>Help</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#" class="navbar__link"><i data-feather="share"></i><span>Share</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#" class="navbar__link"><i data-feather="code"></i><span>My Website</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="#" class="navbar__link"><i data-feather="settings"></i><span>Settings</span></a>        
+    </li>
+  </ul>
+</nav>
 
+<script>
 
+$("#formbutton").click(function() {
+  $("#form").toggle("slow");
+});
+$("#homebutton").click(function() {
+  $("#form").hide();
+});
 
-<ul>
-  <li><a class="active" href="/">Home</i></a></li>
+</script>
 
-  <li><a href="/aboutme.html">About</a></li>
+<div draggable="true" class="container" id="form" style="display: none">  
+  <form id="contact" action="https://formspree.io/f/xyylaapn" method="post">
+    <h3>Request a Quote!</h3>
+    <h4>Request a Quote Today For Free!</h4>
+    <fieldset>
+      <input name="Name" placeholder="First and Last Name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input name="Email" placeholder="Email Address (ie. JohnDoe@Launchdev.net)" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input name="Phone Number" placeholder="Phone Number (ie. (123) 456-7890)" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input name="COmputer type" placeholder="Type of Computer (ie. Custom, Lenovo 2019)" type="text" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <textarea name="Issue" placeholder="Technical Issue..." tabindex="3" required></textarea>
+    </fieldset>
+    <fieldset>
+      <textarea name="Info about Issue" placeholder="Additional Information..." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+ 
+  
+</div>
 
-  <li><a href="submit.html">Register</a></li>
-
-</ul>
+<!-- partial -->
+  <script src='https://unpkg.com/feather-icons'></script><script  src="./script.js"></script>
 
 </body>
 </html>
