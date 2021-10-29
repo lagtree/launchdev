@@ -1,10 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
-body {
-  background: #eaeef6;
-  font-family: "Open Sans", sans-serif;
-}
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+.arrow-up {
+  position:fixed;
+  left:0;
+  margin:0;
+  bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 75px solid black;
+}
+.arrow-up1 {
+  position:fixed;
+  left: 150px;
+  margin:0;
+  bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 150px solid black;
+}
+.arrow-up2 {
+  position:fixed;
+  left: 280px;
+  margin:0;
+  bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 75px solid black;
+}
+.arrow-up3 {
+  position:fixed;
+  left: 700px;
+  margin:0;
+  bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 480px solid transparent;
+  border-right: 299px solid transparent;
+  border-bottom: 280px solid black;
+}
+.arrow-up4 {
+  position:fixed;
+  left: 500px;
+  margin:0;
+  bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 180px solid black;
+}
+.arrow-up5 {
+  position:fixed;
+  left:1300px;
+  margin:0;
+  bottom:0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 80px solid black;
+}
 
 * {
 	margin:0;
@@ -23,7 +86,7 @@ body {
 	font-size: 13px;
 	line-height:30px;
 	color:#777;
-	background:#0CF;
+  background-color: #33eb8c;
 }
 
 .container {
@@ -42,11 +105,18 @@ body {
   border-radius: 15px;
 }
 
+#contact h2 {
+  color:#39c24b;
+  display:block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 #contact h3 {
-	color: #F96;
+	color:#24be39;
 	display: block;
 	font-size: 30px;
-	font-weight: 400;
+	font-weight: 1000;
 }
 
 #contact h4 {
@@ -88,7 +158,7 @@ fieldset {
 	cursor:pointer;
 	width:100%;
 	border:none;
-	background:#0CF;
+	background:#33eb8c;
 	color:#FFF;
 	margin:0 0 5px;
 	padding:10px;
@@ -96,7 +166,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-	background:#09C;
+	background:#33eb8c;
 	-webkit-transition:background 0.3s ease-in-out;
 	-moz-transition:background 0.3s ease-in-out;
 	transition:background-color 0.3s ease-in-out;
@@ -164,7 +234,7 @@ fieldset {
   left: 100%;
   transform: translate(-3rem);
   opacity: 0;
-  color: #406ff3;
+  color:#33eb8c;
   background: #fff;
   padding: 0.75rem;
   transition: 250ms ease all;
@@ -189,7 +259,7 @@ fieldset {
   left: 1rem;
   width: 3.5rem;
   height: 3.5rem;
-  background: #406ff3;
+  background: #33eb8c;
   border-radius: 17.5px;
   transition: 250ms cubic-bezier(1, 0.2, 0.1, 1.2) all;
 }
