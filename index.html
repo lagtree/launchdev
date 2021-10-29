@@ -10,7 +10,13 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
+<div class="arrow-up"></div>
+<div class="arrow-up1"></div>
+<div class="arrow-up2"></div>
+<div class="arrow-up3"></div>
+<div class="arrow-up4"></div>
+<div class="arrow-up5"></div>
 <nav class="navbar">
   <ul class="navbar__menu">
     <li class="navbar__item">
@@ -32,7 +38,7 @@
       <a id="code" href="#" class="navbar__link"><i data-feather="code"></i><span>My Website</span></a>        
     </li>
     <li class="navbar__item">
-      <a href="#" class="navbar__link"><i data-feather="settings"></i><span>Settings</span></a>        
+      <a id="settingsbutton"href="#" class="navbar__link"><i data-feather="settings"></i><span>Settings</span></a>        
     </li>
   </ul>
 </nav>
@@ -43,21 +49,34 @@ $("#homebutton").click(function() {
   $("#form").hide("slow");
   $("#About").hide("slow");
   $("#Help").hide("slow");
+  $("#CodePen").hide("slow");
 });
 $("#formbutton").click(function() {
   $("#form").toggle("slow");
   $("#About").hide("slow");
   $("#Help").hide("slow");
+  $("#CodePen").hide("slow");
 });
 $("#Aboutme").click(function() {
   $("#About").toggle("slow");
   $("#form").hide("slow");
   $("#Help").hide("slow");
+  $("#CodePen").hide("slow");
 });
 $("#HelpButton").click(function() {
   $("#Help").toggle("slow");
   $("#form").hide("slow");
   $("#About").hide("slow");
+  $("#CodePen").hide("slow");
+});
+$("#code").click(function() {
+  $("#CodePen").toggle("slow");
+  $("#form").hide("slow");
+  $("#About").hide("slow");
+  $("#Help").hide("slow");
+});
+$("#Share").click(function() {
+
 });
 
 </script>
@@ -93,9 +112,9 @@ $("#HelpButton").click(function() {
 <div class="container" id="About" style="display: none;">
   <form id="contact">
     <h3>About me: </h3>
-    <h2>My name is <b>Zachary Verreault</b> </h2>
+    <h2>My name is Zachary Verreault</h2>
     <p><br>I am a CyberSecurity Student and working on Computer Repair, Programming, Cyber Defence, and more. <br> You can find the code for this Website and other of my projects in the "< >" tab on the left-most part of the screen</p>
-    <h2><br><b>Thank you!</b></h2>
+    <h2><br>Thank you!</h2>
   </form>
 </div>
 
@@ -105,6 +124,18 @@ $("#HelpButton").click(function() {
     
   </form>
 </div>
+
+<div class="container" id="CodePen" style="display: none;">
+  <form id="contact">
+    <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="html" data-slug-hash="rNzzYwy" data-user="ZacV" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/ZacV/pen/rNzzYwy">
+      Untitled</a> by Zachary V (<a href="https://codepen.io/ZacV">@ZacV</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  </form>
+</div>
+
 
 <!-- partial -->
   <script src='https://unpkg.com/feather-icons'></script><script  src="./script.js"></script>
