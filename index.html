@@ -23,13 +23,13 @@
       <a id="Aboutme" href="#" class="navbar__link"><i data-feather="user"></i><span>About Me</span></a>        
     </li>
     <li class="navbar__item">
-      <a href="#" class="navbar__link"><i data-feather="help-circle"></i><span>Help</span></a>        
+      <a id="HelpButton" href="#" class="navbar__link"><i data-feather="help-circle"></i><span>Help</span></a>        
     </li>
     <li class="navbar__item">
-      <a href="#" class="navbar__link"><i data-feather="share"></i><span>Share</span></a>        
+      <a id="Share" href="#" class="navbar__link"><i data-feather="share"></i><span>Share</span></a>        
     </li>
     <li class="navbar__item">
-      <a href="#" class="navbar__link"><i data-feather="code"></i><span>My Website</span></a>        
+      <a id="code" href="#" class="navbar__link"><i data-feather="code"></i><span>My Website</span></a>        
     </li>
     <li class="navbar__item">
       <a href="#" class="navbar__link"><i data-feather="settings"></i><span>Settings</span></a>        
@@ -42,14 +42,22 @@
 $("#homebutton").click(function() {
   $("#form").hide("slow");
   $("#About").hide("slow");
+  $("#Help").hide("slow");
 });
 $("#formbutton").click(function() {
   $("#form").toggle("slow");
   $("#About").hide("slow");
+  $("#Help").hide("slow");
 });
 $("#Aboutme").click(function() {
   $("#About").toggle("slow");
   $("#form").hide("slow");
+  $("#Help").hide("slow");
+});
+$("#HelpButton").click(function() {
+  $("#Help").toggle("slow");
+  $("#form").hide("slow");
+  $("#About").hide("slow");
 });
 
 </script>
@@ -84,9 +92,18 @@ $("#Aboutme").click(function() {
 
 <div class="container" id="About" style="display: none;">
   <form id="contact">
-    <h3>About me</h3>
+    <h3>About me: </h3>
     <h2>My name is <b>Zachary Verreault</b> </h2>
-    <p></p>
+    <p><br>I am a CyberSecurity Student and working on Computer Repair, Programming, Cyber Defence, and more. <br> You can find the code for this Website and other of my projects in the "< >" tab on the left-most part of the screen</p>
+    <h2><br><b>Thank you!</b></h2>
+  </form>
+</div>
+
+<div class="container" id="Help" style="display: none;">
+  <form id="contact">
+    <h3>Help:</h3>
+    
+  </form>
 </div>
 
 <!-- partial -->
