@@ -1,5 +1,27 @@
 feather.replace()
 
+function randomtext() {
+  var randomtxt = [
+      'Man JQuery syntax Sucks',
+      'Think you&#39re so cool, don&#39t you?',
+      'Hehe... "imposter"',
+      'Doesn&#39t even know css? Imagine.',
+      'Oh boy! Cringe!',
+      'What&#39s an MOTD?',
+      'Let it Snow, Let it Snow, Let it snow!',
+      'Big Thanks to Scott Schiller!',
+      'Press Ctrl + R',
+      'Big Joe was here.',
+      'Java moment',
+      'Ontu was here'
+    ];
+  return randomtxt[Math.floor((Math.random() * 11.99))];
+}
+
+document.getElementById("submotd").innerHTML = randomtext();
+
+
+
 /** @license
  * DHTML Snowstorm! JavaScript-based snow for web pages
  * Making it snow on the internets since 2003. You're welcome.
