@@ -1,297 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<style>
+<meta charset="UTF-8">
+<title>Launchdev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
-
-
-* {
-  box-sizing: border-box;
-}
-
-
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-input[type=submit] {
-  background-color: #bed4e9;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-input[type=submit]:hover {
-  background-color: #bed4e9;
-}
-
-
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-li {
-  float: left;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  top: 80%;
-}
-
-@media screen and (max-width: 800px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-  li {
-    float:inline-end;
-  }
-  li a {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    list-style-type: none;
-    color: white;
-    text-align: center;
-    padding: 18px 33px;
-    bottom: 0;
-  }
-  ul {
-    bottom: 0;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .footer {
-  bottom: 0;
-  width: 100%;
-  height: 25px;
-  background-color: white;
-  color: white;
-  text-align: center;
-  }
-}
-
-
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-li a:hover(.active) {
-  background-color: cyan;
-}
-
-.active {
-  background-color: #bed4e9;
-}
-
-
-</style>
 </head>
 <body>
 
 
 
-<ul>
-  <li><a href="/">Home</i></a></li>
+<div id="motd" class="motd">
+  <h2 id="submotd"></h2>
+</div>
 
-  <li><a href="/aboutme.html">About</a></li>
+<div id="M1" class="arrow-up"></div>
+<div id="M2" class="arrow-up1"></div>
+<div id="M3" class="arrow-up2"></div>
+<div id="M4" class="arrow-up3"></div>
+<div id="M5" class="arrow-up4"></div>
+<div id="M6" class="arrow-up5"></div>
 
-  <li><a class="active" href="">Register</a></li>
+<nav class="navbar">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
+      <a id="homebutton" href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
+    </li>
+    <li class="navbar__item">
+      <a id="formbutton" href="#" class="navbar__link"><i data-feather="file-text"></i><span>Ticket Request</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a id="Aboutme" href="#" class="navbar__link"><i data-feather="user"></i><span>About Me</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a id="HelpButton" href="#" class="navbar__link"><i data-feather="help-circle"></i><span>Help</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a id="Share" href="#" class="navbar__link"><i data-feather="share"></i><span>Share</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a id="code" href="#" class="navbar__link"><i data-feather="code"></i><span>My Website</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a id="settingsbutton" href="#" class="navbar__link"><i data-feather="settings"></i><span>Settings</span></a>        
+    </li>
+  </ul>
+</nav>
 
-</ul>
-
-
-
-<h2>Ticket Request Form:</h2>
-
-<p>To have your device repair requested, you must fill out this form. Please note, all buisness is restricted to central Florida.</p>
-
-
-
-<div class="container">
-  <form action="https://formspree.io/f/moqybabj" method="POST">
-
-
-
-  <div class="row">
-    <div class="col-25">
-      <label for="fname">First Name</label>
-    </div>
-
-
-
-    <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
-    </div>
+<nav id="settings" class="settings" style="display: none;">
+  <ul class="settings__menu">
+    <li class="settings__button">
+      <a id="close" class="closecolor" href="#" ><i data-feather="x"></i></a>
+    </li>
+    <li>
+      <a id="MountainsToggle" href="#" class="ToggleSwitchMt"></a>
+    </li>
+    <li>
+      <a id="MountainsToggle1" href="#" class="ToggleSwitchMt1"></a>
+    </li>
+    <li class="rgbtogglebutton">
+      <a id="rgba" href="#" class="rgbtoggle"><i data-feather="eye"></i></a>
+    </li>
+  </ul>
+  <div>
+    <ul id="CMenu" class="colormenu" style="display: none;">
+      <li>
+        <a id="CDefault" href="#" class="C_Default"></a>
+      </li>
+      <li>
+        <a id="CBlue" href="#" class="C_Blue"></a>
+      </li>
+      <li>
+        <a id="COrange" href="#" class="C_Orange"></a>
+      </li>
+      <li>
+        <a id="CRed" href="#" class="C_Red"></a>
+      </li>
+      <li>
+        <a id="CPurple" href="#" class="C_Purple"></a>
+      </li>
+      <li>
+        <a id="CLBlue" href="#" class="C_LBlue"></a>
+      </li>
+    </ul>
   </div>
+</nav>
 
 
 
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Last Name</label>
-    </div>
+<!-- Caden was here-->
 
 
+<script>
+$("#homebutton").click(function() {
+  $("#form").hide("slow");
+  $("#About").hide("slow");
+  $("#Help").hide("slow");
+  $("#CodePen").hide("slow");
+  $("#settings").hide("slow");
+  
+});
+$("#formbutton").click(function() {
+  $("#form").toggle("slow");
+  $("#About").hide("slow");
+  $("#Help").hide("slow");
+  $("#CodePen").hide("slow");
+  $("#settings").hide("slow");
+});
+$("#Aboutme").click(function() {
+  $("#About").toggle("slow");
+  $("#form").hide("slow");
+  $("#Help").hide("slow");
+  $("#CodePen").hide("slow");
+  $("#settings").hide("slow");
+});
+$("#HelpButton").click(function() {
+  $("#Help").toggle("slow");
+  $("#form").hide("slow");
+  $("#About").hide("slow");
+  $("#CodePen").hide("slow");
+  $("#settings").hide("slow");
+});
+$("#code").click(function() {
+  $("#CodePen").toggle("slow");
+  $("#form").hide("slow");
+  $("#About").hide("slow");
+  $("#Help").hide("slow");
+  $("#settings").hide("slow");
+});
+$("#Share").click(function() {
+});
+$("#settingsbutton").click(function() {
+  $("#settings").toggle("slow");
+  $("#form").hide("slow");
+  $("#About").hide("slow");
+  $("#Help").hide("slow");
+  $("#CodePen").hide("slow");
+});
 
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
-    </div>
-  </div>
+$("#close").click(function() {
+  $("#settings").hide("slow");
+});
+$("#motd").delay(8000).fadeOut()
+$("#MountainsToggle").click(function() {
+  $("#M1").toggle();
+  $("#M2").toggle();
+  $("#M3").toggle();
+  $("#M4").toggle();
+  $("#M5").toggle();
+  $("#M6").toggle();
+});
+$("#MountainsToggle1").click(function() {
+  $("#M1").toggle();
+  $("#M2").toggle();
+  $("#M3").toggle();
+  $("#M4").toggle();
+  $("#M5").toggle();
+  $("#M6").toggle();
+  $("#CMenu").hide();
+});
+$("#rgba").click(function(){
+  $("#CMenu").toggle();
+});
 
+//color switch JQuery stuffs here\/
 
+$("#CDefault").click(function() {
+  $("body").get(0).style.setProperty("--main-color", "#33eb8c")
+  $("body").get(0).style.setProperty("--second-color", "#39c24b")
+  $("body").get(0).style.setProperty("--third-color", "#24be39")
+});
+$("#CBlue").click(function() {
+  $("body").get(0).style.setProperty("--main-color", "Blue")
+  $("body").get(0).style.setProperty("--second-color", "#3636fe") 
+  $("body").get(0).style.setProperty("--third-color", "#010198")
+});
+$("#COrange").click(function() {
+  $("body").get(0).style.setProperty("--main-color", "Orange")
+  $("body").get(0).style.setProperty("--second-color", "#cc7a04")
+  $("body").get(0).style.setProperty("--third-color", "#ffb64d")
+});
+$("#CRed").click(function() {
+  $("body").get(0).style.setProperty("--main-color", "Red")
+  $("body").get(0).style.setProperty("--second-color", "#a70000")
+  $("body").get(0).style.setProperty("--third-color", "#ff5959")
+});
+$("#CPurple").click(function() {
+  $("body").get(0).style.setProperty("--main-color", "Purple")
+  $("body").get(0).style.setProperty("--second-color", "#8E44AD")
+  $("body").get(0).style.setProperty("--third-color", "#AF7AC5")
+});
+$("#CLBlue").click(function() {
+  $("body").get(0).style.setProperty("--main-color", "LightSkyBlue")
+  $("body").get(0).style.setProperty("--second-color", "#85C1E9")
+  $("body").get(0).style.setProperty("--third-color", "#2E86C1")
+});
+</script>
 
-  <div class="row">
-    <div class="col-25">
-      <label for="phone">Phone number</label>
-    </div>
-
-
-
-    <div class="col-75">
-      <input type="text" id="phone" name="Phone number" placeholder="(123) 456-7890" required minlength="10" maxlength="10">
-    </div>
-  </div>
-
-
-
-  <div class="row">
-    <div class="col-25">
-      <label for="email">Email address</label>
-    </div>
-
-
-
-    <div class="col-75">
-      <input type="text" id="email" name="email" placeholder="John.Doe@launchdev.net" required>
-    </div>
-  </div>
-
-
-
-  <div class="row">
-    <dive class="col-25">
-      <label for="Typeofissue">Type of Issue</label>
-    </dive>
-
-
-
-    <div class="col-75">
-      <select id="Type of Issue" name="Type of Issue">
-        <option value="Choose Option">Choose type of Issue Present</option>
-
-        <option value="Software">Software</option>
-
-        <option value="Hardware">Hardware</option>
-
-        <option value="I am unsure">I am unsure</option>
-
-      </select>
-
-    </div>
-  </div>
-
-
-
-  <div class="row">
-    <div class="col-25">
-      <label for="Typeofcomp">Type of Computer</label>
-    </div>
-
-
-
-    <div class="col-75">
-      <select id="Device Type" name="Device Type">
-        <option value="Choose Option">Choose kind of device</option>
-
-        <option value="LaptopAfter2015">Laptop (made after 2015)</option>
-
-        <option value="LaptopBefore2015">Laptop (made before 2015)</option>
-
-        <option value="DesktopAfter2015">Desktop (made after 2015)</option>
-
-        <option value="DesktopBefore2015">Desktop (made before 2015)</option>
-
-      </select>
-    </div>
-  </div>
-
-
-
-  <div class="row">
-    <div class="col-25">
-      <label for="Describe Problem">Describe Problem</label>
-    </div>
-    <div class="col-75">
-      <textarea id="Describe Problem" name="Describe Problem" placeholder="Write something.." style="height:200px"></textarea>
-    </div>
-  </div>
-
-
-
-  <div class="row">
-    <input type="submit" value="Submit">
-  </div>
-
-  <div class="footer">
-    <p>Made by Zachary Verreault</p>
-
+<div class="container" id="form" style="display: none">  
+  <form id="contact" action="https://formspree.io/f/xyylaapn" method="post">
+    <h3>Request a Quote!</h3>
+    <h4>Request a Quote Today For Free!</h4>
+    <fieldset>
+      <input name="Name" placeholder="First and Last Name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input name="Email" placeholder="Email Address (ie. JohnDoe@Launchdev.net)" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input name="Phone Number" placeholder="Phone Number (ie. (123) 456-7890)" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input name="Computer type" placeholder="Type of Computer (ie. Custom, Lenovo 2019)" type="text" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <textarea name="Issue" placeholder="Technical Issue..." tabindex="3" required></textarea>
+    </fieldset>
+    <fieldset>
+      <textarea name="Info about Issue" placeholder="Additional Information..." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
   </form>
 </div>
 
+<div class="container" id="About" style="display: none;">
+  <form id="contact">
+    <h3>About me: </h3>
+    <h2>My name is Zachary Verreault</h2>
+    <p><br>I am a CyberSecurity Student and working on Computer Repair, Programming, Cyber Defence, and more. <br> You can find the code for this Website and other of my projects in the "< >" tab on the left-most part of the screen</p>
+    <h2><br>Thank you!</h2>
+  </form>
+</div>
+
+<div class="Help" id="Help" style="display: none;">
+  <form id="contact">
+    <h3>Help:</h3>
+    
+  </form>
+</div>
+
+<div class="container" id="CodePen" style="display: none;">
+  <form id="contact">
+    <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="html" data-slug-hash="rNzzYwy" data-user="ZacV" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/ZacV/pen/rNzzYwy">
+      Untitled</a> by Zachary V (<a href="https://codepen.io/ZacV">@ZacV</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  </form>
+</div>
+
+
+
+<!-- partial -->
+  <script src='https://unpkg.com/feather-icons'></script><script  src="./script.js"></script>
 </body>
 </html>
