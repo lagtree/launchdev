@@ -645,7 +645,7 @@ fieldset {
   left: 100%;
   transform: translate(-3rem);
   opacity: 0;
-  color:var(--main-color);
+  color: var(--main-color);
   background: #fff;
   padding: 0.75rem;
   transition: 250ms ease all;
@@ -1828,14 +1828,10 @@ fieldset {
     max-width:100%;
     resize:none;
   }
-  .navbar__item:last-child:before {
-    display: none;
+  .colorcorrection {
+    color:#24be39;
   }
-
   .navbar__link {
-    display: none;
-  }
-  .navbar__link span {
     display: none;
   }
   .arrow-up {
