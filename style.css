@@ -8,6 +8,18 @@ body {
 
 /* Color Configuration */
 
+.smallbutton1 {
+  display: none;
+}
+
+.smallbutton2 {
+  display: none;
+}
+
+.smallbutton3 {
+  display: none;
+}
+
 .colormenu {
   z-index: 10;
   background:lightslategrey;
@@ -100,9 +112,9 @@ body {
   position:absolute;
 }
 
-.C_Default:hover {
+.C_Default:active {
   z-index: 12;
-  background:var(--third-color);
+  background:#39c24b;
   border-radius:10px;
   margin-top: 10px;
   margin-bottom: auto;
@@ -111,10 +123,10 @@ body {
   width: 80px;
   height: 80px;
   position:absolute;
-  animation: settingsanim1 250ms 1;
+  animation: settingsanim1 450ms 1;
 }
 
-.C_Orange:hover {
+.C_Orange:active {
   z-index: 12;
   background:rgb(158, 103, 1);
   border-radius:10px;
@@ -125,10 +137,10 @@ body {
   width: 80px;
   height: 80px;
   position:absolute;
-  animation: settingsanim1 250ms 1;
+  animation: settingsanim1 450ms 1;
 }
 
-.C_Blue:hover {
+.C_Blue:active {
   z-index: 12;
   background:rgb(1, 1, 153);
   border-radius:10px;
@@ -139,10 +151,10 @@ body {
   width: 80px;
   height: 80px;
   position:absolute;
-  animation: settingsanim1 250ms 1;
+  animation: settingsanim1 450ms 1;
 }
 
-.C_Red:hover {
+.C_Red:active {
   z-index: 12;
   background:rgb(156, 2, 2);
   border-radius:10px;
@@ -153,10 +165,10 @@ body {
   width: 80px;
   height: 80px;
   position:absolute;
-  animation: settingsanim1 250ms 1;
+  animation: settingsanim1 450ms 1;
 }
 
-.C_Purple:hover {
+.C_Purple:active {
   z-index: 12;
   background:rgb(83, 1, 83);
   border-radius:10px;
@@ -167,10 +179,10 @@ body {
   width: 80px;
   height: 80px;
   position:absolute;
-  animation: settingsanim1 250ms 1;
+  animation: settingsanim1 450ms 1;
 }
 
-.C_LBlue:hover {
+.C_LBlue:active {
   z-index: 12;
   background:rgb(90, 159, 202);
   border-radius:10px;
@@ -181,7 +193,7 @@ body {
   width: 80px;
   height: 80px;
   position:absolute;
-  animation: settingsanim1 250ms 1;
+  animation: settingsanim1 450ms 1;
 }
 
 
@@ -1716,5 +1728,132 @@ fieldset {
   }
   100% {
     transform: scale(1, 1);
+  }
+}
+
+
+
+@media only screen and (max-width: 426px) {
+  .navbar {
+    position: fixed;
+    top:auto;
+    bottom: 19.499px;
+    left: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+    height: 70px;
+    width: calc(100% - 30px);
+    display: flex;
+  }
+  .smallbutton1 {
+    position: fixed;
+    top:auto;
+    bottom: 19.499px;
+    left: 0%;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    height: 60px;
+    width: calc(33.333%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--main-color);
+    padding: 1.75rem;
+  }
+  .smallbutton2 {
+    position: fixed;
+    top:auto;
+    bottom: 19.499px;
+    left: 33.333%;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    height: 60px;
+    width: calc(33.333%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--main-color);
+  }
+  .smallbutton3 {
+    position: fixed;
+    top:auto;
+    bottom: 19.499px;
+    left: 66.666%;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    height: 60px;
+    width: calc(33.333%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--main-color);
+  }
+  #contact {
+    background:#F9F9F9;
+    padding:25px;
+    margin:25px 0;
+    border-radius: 15px;
+  }
+  
+  #contact h2 {
+    color:var(--second-color);
+    display:block;
+    font-size: 15px;
+    font-weight: 450;
+  }
+  
+  #contact h3 {
+    color:var(--third-color);
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  #contact h4 {
+    margin:12px 0 12px;
+    display:block;
+    font: size 12px;
+  }
+  
+  fieldset {
+    border: medium none !important;
+    margin: 0 0 2px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  #contact textarea {
+    height: 55px;
+    max-width:100%;
+    resize:none;
+  }
+  .navbar__item:last-child:before {
+    display: none;
+  }
+
+  .navbar__link {
+    display: none;
+  }
+  .navbar__link span {
+    display: none;
+  }
+  .arrow-up {
+    display: none;
+  }
+  .arrow-up1 {
+    display: none;
+  }
+  .arrow-up2 {
+    display: none;
+  }
+  .arrow-up3 {
+    display: none;
+  }
+  .arrow-up4 {
+    display: none;
+  }
+  .arrow-up5 {
+    display: none;
   }
 }
