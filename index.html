@@ -28,14 +28,15 @@
 <nav class="navbar">
   <ul class="navbar__menu">
     <li class="smallbutton1">
-      <a id="formbutton" href="#"><i data-feather="file-text"></i></a>
+      <a id="formbutton1" href="#" class="colorcorrection"><i data-feather="file-text"></i></a>
     </li>
     <li class="smallbutton2">
-      <a id="HelpButton" href="#"><i data-feather="help-circle"></i></a>
+      <a id="HelpButton1" href="#" class="colorcorrection"><i data-feather="help-circle"></i></a>
     </li>
     <li class="smallbutton3">
-      <a id="Share" href="#"><i data-feather="share"></i></a>
+      <a id="Share1" href="#" class="colorcorrection"><i data-feather="share"></i></a>
     </li>
+
     <li class="navbar__item">
       <a id="homebutton" href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
     </li>
@@ -120,6 +121,13 @@ $("#formbutton").click(function() {
   $("#CodePen").hide("slow");
   $("#settings").hide("slow");
 });
+$("#formbutton1").click(function() {
+  $("#form").toggle("slow");
+  $("#About").hide("slow");
+  $("#Help").hide("slow");
+  $("#CodePen").hide("slow");
+  $("#settings").hide("slow");
+});
 $("#Aboutme").click(function() {
   $("#About").toggle("slow");
   $("#form").hide("slow");
@@ -134,6 +142,13 @@ $("#HelpButton").click(function() {
   $("#CodePen").hide("slow");
   $("#settings").hide("slow");
 });
+$("#HelpButton1").click(function() {
+  $("#Help").toggle("slow");
+  $("#form").hide("slow");
+  $("#About").hide("slow");
+  $("#CodePen").hide("slow");
+  $("#settings").hide("slow");
+});
 $("#code").click(function() {
   $("#CodePen").toggle("slow");
   $("#form").hide("slow");
@@ -142,6 +157,8 @@ $("#code").click(function() {
   $("#settings").hide("slow");
 });
 $("#Share").click(function() {
+});
+$("#Share1").click(function() {
 });
 $("#settingsbutton").click(function() {
   $("#settings").toggle("slow");
