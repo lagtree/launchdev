@@ -1853,3 +1853,16 @@ fieldset {
     display: none;
   }
 }
+@media only screen and (max-height: 426px) {
+
+  .navbar__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.3rem;
+    width: 5.5rem;
+    color: #6a778e;
+    transition: 250ms ease all;
+  }
+}
