@@ -157,8 +157,36 @@ $("#code").click(function() {
   $("#settings").hide("slow");
 });
 $("#Share").click(function() {
+  //Just an experiment. Assuming you want this to be a Share Button. 
+  if (navigator.share) {
+    navigator.share({
+      title: 'Launchdev',
+      url: 'https://launchdev.net'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(console.error);
+  } else {
+    alert("Your device does not support the WebShare API.")
+  };
+  //This uses a device's native sharing options. 
+  //Feel free to remove this. 
 });
 $("#Share1").click(function() {
+  //Just an experiment. Assuming you want this to be a Share Button. 
+  if (navigator.share) {
+    navigator.share({
+      title: 'Launchdev',
+      url: 'https://launchdev.net'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(console.error);
+  } else {
+    alert("Your device does not support the WebShare API.")
+  };
+  //This uses a device's native sharing options. 
+  //Feel free to remove this. 
 });
 $("#settingsbutton").click(function() {
   $("#settings").toggle("slow");
