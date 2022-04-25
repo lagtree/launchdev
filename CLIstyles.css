@@ -1,0 +1,89 @@
+:root {
+  /*colors */
+  --grey: rgb(50,50,50);
+  --secondgrey: rgb(40,40,40);
+  --green: rgb(30, 180, 30);  
+}
+
+body{
+  background-color:var(--grey);
+  font-family: 'Courier New', monospace;
+}
+
+.stats{
+  position:absolute;
+  background-color:var(--secondgrey);
+  top:10px;
+  width:150px;
+  height:60px;
+  outline-color:var(--green);
+  outline-width:3px;
+  outline-style:solid;
+}
+
+.stats .DispStatus{
+  position:absolute;
+  left:10px;
+  top:0px;
+  color:var(--green);
+  font-size:15px;
+}
+
+.stats .DispLink{
+  position:absolute;
+  left:10px;
+  bottom:10px;
+  color:grey;
+  font-size:15px;
+}
+
+.terminalBody{
+  position:absolute;
+  width:auto;
+  left:170px;
+  right:10px;
+  height:auto;
+  top:10px;
+  bottom:10px;
+  background-color:var(--secondgrey);
+  outline-color:var(--green);
+  outline-width:3px;
+  outline-style:solid;
+}
+
+.terminalBody .terminalInput{
+  position:absolute;
+  left:60px;
+  width:calc(100% - 67.5px);
+  height:40px;
+  bottom:0px;
+  top:auto;
+  outline-color:var(--green);
+  outline-width:3px;
+  outline-style:solid;
+  background-color:var(--grey);
+  color:var(--green);
+  font-size:17px;
+}
+
+.terminalBody svg{
+  position:absolute;
+  width:40px;
+  height:40px;
+  left:10px;
+  bottom:6px;
+  top:auto;
+  color:var(--green);
+}
+
+.terminalBody h3 {
+  position:absolute;
+  color:var(--green);
+  left:60px;
+  height:auto;
+  font-size:17px;
+  display: inline-block;
+  align-self: flex-end;
+  bottom:40px;
+  overflow:auto;
+}
